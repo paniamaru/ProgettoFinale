@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="609.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AdminPageController">
+   <bottom>
+      <AnchorPane minHeight="-Infinity" prefHeight="34.0" prefWidth="600.0" style="-fx-background-color: #F20079;" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" layoutX="619.0" layoutY="-1.0" prefHeight="19.0" prefWidth="76.0" text="iVote" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Mongolian Baiti" size="12.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="623.0" layoutY="5.0" prefHeight="30.0" prefWidth="68.0" text="un nuovo modo" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Verdana" size="7.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="626.0" layoutY="23.0" prefHeight="10.0" prefWidth="62.0" text="di votare" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Verdana" size="7.0" />
+               </font>
+            </Label>
+            <Line endX="78.66668701171875" layoutX="603.0" layoutY="14.0" startX="28.666671752929688" stroke="WHITE" />
+            <Label alignment="CENTER" layoutX="-38.0" layoutY="-2.0" prefHeight="30.0" prefWidth="227.0" text="Progetto originale Ing SW" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Verdana" size="8.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="-41.0" layoutY="8.0" prefHeight="30.0" prefWidth="227.0" text="Panebianco e Peccenati" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Verdana" size="7.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </bottom>
+   <right>
+      <AnchorPane prefHeight="574.0" prefWidth="284.0" style="-fx-background-color: #D2D2D2;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="benvenuto" alignment="TOP_LEFT" layoutX="17.0" layoutY="11.0" prefHeight="17.0" prefWidth="259.0" text="Ciao" />
+            <TableView fx:id="tabellaPartiti" layoutX="20.0" layoutY="79.0" prefHeight="162.0" prefWidth="250.0">
+              <columns>
+                <TableColumn fx:id="idPartito" prefWidth="255.0" text="Partito" />
+              </columns>
+            </TableView>
+            <TableView fx:id="tabellaCandidati" layoutX="20.0" layoutY="333.0" prefHeight="162.0" prefWidth="250.0">
+               <columns>
+                <TableColumn fx:id="idCandidato" prefWidth="249.0" text="Candidato" />
+               </columns>
+            </TableView>
+            <TextField fx:id="idNuovoNomePartito" layoutX="20.0" layoutY="254.0" prefHeight="25.0" prefWidth="148.0" promptText="Nome Nuovo Partito" />
+            <TextField fx:id="idNuovoNomeCandidato" layoutX="20.0" layoutY="495.0" prefHeight="25.0" prefWidth="149.0" promptText="Nome Nuovo Candidato" />
+            <Button fx:id="buttonCreatePartito" layoutX="167.0" layoutY="254.0" mnemonicParsing="false" onAction="#bottoneCreatePartitoPremuto" text="Aggiungi Partito" />
+            <Button fx:id="buttonCreateCandidato" layoutX="168.0" layoutY="495.0" mnemonicParsing="false" onAction="#bottoneCreateCandidatoPremuto" prefHeight="25.0" prefWidth="102.0" text="AggiungiCandidato" />
+            <Button fx:id="buttonDeletePartito" layoutX="178.0" layoutY="288.0" mnemonicParsing="false" onAction="#bottoneCancellazionePartitoPremuto" prefHeight="25.0" prefWidth="92.0" text="Button" />
+            <Button fx:id="buttonDeleteCandidato" layoutX="177.0" layoutY="527.0" mnemonicParsing="false" onAction="#bottoneCancellazioneCandidatoPremuto" prefHeight="25.0" prefWidth="94.0" text="Button" />
+         </children>
+      </AnchorPane>
+   </right>
+   <center>
+      <AnchorPane prefHeight="392.0" prefWidth="401.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox layoutX="12.0" layoutY="44.0" prefHeight="557.0" prefWidth="386.0" spacing="10.0">
+               <children>
+                  <TableView fx:id="tabellaVotazioni" prefHeight="465.0" prefWidth="386.0">
+                    <columns>
+                      <TableColumn fx:id="idID" prefWidth="83.0" text="ID" />
+                      <TableColumn fx:id="idTipo" prefWidth="102.0" text="Tipo" />
+                      <TableColumn fx:id="idNome" prefWidth="190.66665649414062" text="Nome" />
+                    </columns>
+                  </TableView>
+                  <HBox prefHeight="30.0" prefWidth="377.0" spacing="10.0">
+                     <children>
+                        <TextField fx:id="idNuovoNome" promptText="Nome" />
+                        <TextField fx:id="idNuovoTipo" prefWidth="143.0" promptText="Tipo" />
+                        <Button fx:id="buttonCreate" mnemonicParsing="false" onAction="#bottoneCreazionePremuto" prefHeight="25.0" prefWidth="77.0" text="Aggiungi" />
+                     </children>
+                  </HBox>
+                  <Button fx:id="idDelete" mnemonicParsing="false" onAction="#bottoneCancellazionePremuto" prefHeight="26.0" prefWidth="178.0" text="Cancella Votazione" textAlignment="CENTER" textFill="RED" wrapText="true" />
+               </children>
+            </VBox>
+            <Label layoutX="156.0" layoutY="-4.0" prefHeight="19.0" prefWidth="72.0" text="Votazioni" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

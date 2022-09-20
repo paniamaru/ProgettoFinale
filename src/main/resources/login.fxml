@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginController">
+   <left>
+      <AnchorPane prefHeight="407.0" prefWidth="228.0" style="-fx-background-color: #F20079;" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" layoutX="2.0" layoutY="137.0" prefHeight="30.0" prefWidth="227.0" text="iVote" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Mongolian Baiti" size="27.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="2.0" layoutY="184.0" prefHeight="30.0" prefWidth="227.0" text="un nuovo modo" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Verdana" size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="2.0" layoutY="206.0" prefHeight="30.0" prefWidth="227.0" text="di votare" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Verdana" size="15.0" />
+               </font>
+            </Label>
+            <Line endX="72.0" layoutX="115.0" layoutY="176.0" startX="-69.0" stroke="WHITE" strokeWidth="2.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="40.0" layoutX="94.0" layoutY="31.0" rotate="52.4" stroke="WHITE" strokeType="INSIDE" width="46.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="181.0" layoutX="22.0" layoutY="98.0" stroke="WHITE" strokeType="INSIDE" width="183.0" />
+            <Line endX="32.0" layoutX="113.0" layoutY="99.0" startX="-23.0" stroke="WHITE" strokeWidth="3.0" />
+            <Label alignment="CENTER" layoutX="1.0" layoutY="356.0" prefHeight="30.0" prefWidth="227.0" text="Progetto originale Ing SW" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Verdana" size="9.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutY="371.0" prefHeight="30.0" prefWidth="227.0" text="Panebianco e Peccenati" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Verdana" size="9.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="407.0" prefWidth="332.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" layoutX="32.0" layoutY="60.0" prefHeight="30.0" prefWidth="227.0" text="Accesso" textAlignment="CENTER" textFill="#80194c">
+               <font>
+                  <Font name="Mongolian Baiti" size="27.0" />
+               </font>
+               <effect>
+                  <Glow />
+               </effect>
+            </Label>
+            <Label alignment="CENTER" layoutX="24.0" layoutY="146.0" prefHeight="30.0" prefWidth="88.0" text="Username" textAlignment="CENTER" textFill="#80194c">
+               <font>
+                  <Font name="Mongolian Baiti" size="14.0" />
+               </font>
+               <effect>
+                  <Glow />
+               </effect>
+            </Label>
+            <TextField fx:id="idUsername" layoutX="110.0" layoutY="149.0" prefHeight="26.0" prefWidth="143.0" promptText="Username" />
+            <Label alignment="CENTER" layoutX="24.0" layoutY="185.0" prefHeight="30.0" prefWidth="88.0" text="Password" textAlignment="CENTER" textFill="#80194c">
+               <font>
+                  <Font name="Mongolian Baiti" size="14.0" />
+               </font>
+               <effect>
+                  <Glow />
+               </effect>
+            </Label>
+            <Button fx:id="buttonLogin" layoutX="36.0" layoutY="276.0" mnemonicParsing="false" onAction="#handleLogin" prefHeight="35.0" prefWidth="223.0" style="-fx-background-color: #009294;" text="Login" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold" size="13.0" />
+               </font>
+            </Button>
+            <Label fx:id="idError" alignment="CENTER" layoutX="36.0" layoutY="246.0" prefHeight="30.0" prefWidth="224.0" text="Login fallito! Username o password non validi" textAlignment="CENTER" textFill="#80194c" visible="false">
+               <font>
+                  <Font name="Mongolian Baiti" size="11.0" />
+               </font>
+               <effect>
+                  <Glow />
+               </effect>
+            </Label>
+            <TextField fx:id="idPassword" layoutX="110.0" layoutY="187.0" prefHeight="26.0" prefWidth="143.0" promptText="Password" />
+            <CheckBox fx:id="admin" layoutX="195.0" layoutY="318.0" mnemonicParsing="false" text="Admin?" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
